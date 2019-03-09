@@ -3,15 +3,158 @@
 .home-container{
     background-color: $light-white;
     display: grid;
-    grid-template-areas: 'home-main home-main',
-                        'home-second-section home-second-section',
-                        'home-side-one home-side-three',
-                        'home-side-two home-side-three',
-                        'home-bottom-section home-bottom-section'   
+    grid-template-areas: 'home-main home-main'
+                        'home-second-section home-second-section'
+                        'home-side-one home-side-three'
+                        'home-side-two home-side-three'
+                        'home-bottom-section home-bottom-section';  
+}
+
+.home-side-one{
+    grid-area: home-side-one;
+}
+
+.home-side-two{
+    grid-area: home-side-two;
+}
+
+.home-side-three{
+    grid-area: home-side-three;
+}
+
+.home-bottom-section{
+    grid-area: home-bottom-section;
+    background-color: #efefef;
 }
 
 .home-main{
     width: 100%;
-    height: 961px;
-    
+    height: auto;  
+    grid-area: home-main; 
+}
+
+.home-second-section{
+    margin: 12px 5px;
+    grid-area: home-second-section;
+    display: flex;
+}
+
+.btn-shop{
+    width: 160px;
+    height: 48px;
+    border-radius: 24px;
+    background-color: $tertary-color;
+    color: $primary-color;
+    font-weight: bold;
+}
+
+.btn-subscribe{
+    width: 90px;
+    height: 37px;
+    border-radius: 24px;
+    background-color: $tertary-color;
+    color: $primary-color;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.tote-container{
+    display: flex;
+    margin: 0 10px;
+    padding: 15px;
+    background-color: $primary-color;
+}
+
+.tote-img{
+    flex: 0.5;
+}
+.tote-text{
+    margin-top: 50px;
+    flex: 1;
+}
+
+.bag-heading{
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 0.5px;
+    color: $secondary-color;
+}
+
+.para-heading{
+    font-family: OpenSans;
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: $secondary-color;
+}
+
+.wow-container{
+    background-color: #84e6f1;
+    width: 300px;
+    height: 300px;
+    margin: 15px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    padding: 20px;
+}
+
+.wow-heading{
+    font-family: PlayfairDisplay;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    align-content: flex-end;
+}
+
+.wow-text-one,
+.wow-text-two{
+    font-family: Montserrat;
+    font-size: 21px;
+    color: $tertary-color;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin: 0px;
+}
+
+.wow-text-two{
+    text-transform: uppercase;
+}
+
+.bottom-container{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+.btm-disc-text{
+    color: $tertary-color;
+    font-size: 20px;
+    font-family: Montserrat;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+}
+
+.btm-desc-txt{
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: bold;
+    color: $secondary-color;
+    line-height: 1.5;
+    letter-spacing: 1.5;
+}
+
+.form-control-email{
+    width: 313px;
+    height: 34px;
+    border-radius: 15px;
+    border: solid 0.5px #e1e1e1;
 }
