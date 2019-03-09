@@ -1,19 +1,37 @@
 @import '../../Shared/common.scss';
 
-.header-menu{
-    height: 36px;
-    background-color: $secondary-color;
-}
+.dark{
+    color: $secondary-color;
+    height: 3.2%;
 
-.logo {
-    width: 253px;
-    height: 14.5px;
-    font-family: Montserrat;
-    font-size: 24px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: 4px;
-    color: $tertary-color;
-  }
+    .logo {
+        width: 253px;
+        font-family: Montserrat;
+        font-size: 24px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 4px;
+        color: $tertary-color;
+    }
+}
+.navbar-dark {
+    .navbar-nav {
+        .nav-link{
+            width: 100%;
+            font-family: Montserrat;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 2.4;
+            letter-spacing: normal;
+            color: white;
+        } 
+    }
+}        
+
+.form-control-search{
+    width: 374px;
+    border-radius: 19px;
+}
