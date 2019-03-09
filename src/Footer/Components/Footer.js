@@ -35,7 +35,7 @@ class Footer extends Component {
                     </ul>    
                 </div>  
                 <div className="footer-list">
-                    <p className="footer-text"><i class="fa fa-copyright"></i>2016 shopmate ltd</p>
+                    <p className="footer-text"><i className="fa fa-copyright mr-2"></i>2016 shopmate Ltd</p>
                 </div>  
             </div>    
         )

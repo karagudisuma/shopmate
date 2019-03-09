@@ -10,8 +10,10 @@
     flex: 1;
     margin: 60px auto 60px 28px;
     ul{
+        padding: 0px;
         li{
             list-style-type: none;
+            margin-left: 0px;
         }
     }
 }
