@@ -1,0 +1,17 @@
+@import '../../Shared/common.scss';
+
+.home-container{
+    background-color: $light-white;
+    display: grid;
+    grid-template-areas: 'home-main home-main',
+                        'home-second-section home-second-section',
+                        'home-side-one home-side-three',
+                        'home-side-two home-side-three',
+                        'home-bottom-section home-bottom-section'   
+}
+
+.home-main{
+    width: 100%;
+    height: 961px;
+    
+}
