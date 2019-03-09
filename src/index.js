@@ -9,7 +9,6 @@ import rootReducer from './rootReducer';
 import rootSaga from './rootSagas';
 import App from './App';
 
-
 const sagaMiddleware = createSagaMiddleware();
 
 const store = createStore(

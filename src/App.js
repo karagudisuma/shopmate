@@ -1,10 +1,10 @@
 
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import {withErrorBoundary} from './ErrorPage';
 import { ProtectedRoutes } from './Routes/protectedRoutes';
 import { PublicRoutes } from './Routes/publicRoutes';
-import './App.css';
+import Header from './Header';
 
 class App extends Component {
   constructor() {
@@ -13,12 +13,12 @@ class App extends Component {
 
   render() {
     return (
-      <div className="content-container">
-        
+      <Fragment>
+        <Header.components.Header />
         <Switch>
           <Route path="/" component={PublicRoutes} />
         </Switch>
-      </div>
+      </Fragment>
     );
   }
 }
