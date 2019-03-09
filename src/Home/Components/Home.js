@@ -1,11 +1,18 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, Component } from 'react';
 import '../Styles/style.scss';
 import { withErrorBoundary } from '../../ErrorPage';
 
-const About = () => (
-        <div>
-            <p>Home page</p>
-        </div>    
-);
+class Home extends Component {
+    constructor(props){
+        super(props);
+    }
+    render(){
+        return (
+            <div>
+                <p>Adding</p>
+            </div>    
+        )
+    }
+}
 
-export default withErrorBoundary(About);
+export default withErrorBoundary(Home);
