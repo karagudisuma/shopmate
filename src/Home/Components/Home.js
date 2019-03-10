@@ -16,53 +16,53 @@ function TotoBagComponent() {
                 <h2 className="bag-heading">Vera Bradley</h2>
                 <p className="para-heading">Carry the day in style with this extra-large tote crafted in our chic B.B. Collection textured PVC. Featuring colorful faux leather trim, this tote offers a roomy interior plus just enough perfectly placed pockets to keep smaller items organized and easy to find.</p>
                 <Button variant="primary" bsPrefix="btn-shop">Shop now</Button>
-            </div>    
+            </div>
         </div>
 
     );
 }
 
-function WowComponent(){
+function WowComponent() {
     return (
         <div className="wow-container">
             <p className="wow-heading">wow</p>
             <p className="wow-text-one">Check</p>
             <p className="wow-text-two">What!</p>
-        </div>    
+        </div>
     )
 }
 
-function BottomComponent(){
+function BottomComponent() {
     return (
         <div class="bottom-container p-5">
             <p className="btm-disc-text">10% Discount for your subscription</p>
             <p className="btm-desc-txt">Carry the day in style with this extra-large tote crafted in our chic B.B. Collection textured PVC. Featuring colorful faux leather trim, this tote offers a roomy interior.</p>
             <Form inline>
-                <FormControl type="text" placeholder="Your email here" className="m-2 p-2" bsPrefix="form-control-email"/>
+                <FormControl type="text" placeholder="Your email here" className="m-2 p-2" bsPrefix="form-control-email" />
                 <Button variant="primary" bsPrefix="btn-subscribe">Subscribe</Button>
             </Form>
-        </div>    
+        </div>
     )
 }
 
 class Home extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
     }
-    render(){
+    render() {
         return (
             <Fragment>
-            <div className="home-container">
-                <div className="home-main"><Image src={headerImg} fluid /></div>
-                <div className="home-second-section"><TotoBagComponent /></div>
-                <div className="home-side-one"><WowComponent /></div>
-                <div className="home-side-two">Men</div>
-                <div className="home-side-three">Register</div>
-                <div className="home-bottom-section"><BottomComponent /></div>
-            </div>  
-            </Fragment>  
-        )
-    }
-}
-
-export default withErrorBoundary(Home);
+                <div className="home-container">
+                    <div className="home-main"><Image src={headerImg} fluid /></div>
+                    <div className="home-second-section"><TotoBagComponent /></div>
+                    <div className="home-side-one"><WowComponent /></div>
+                    <div className="home-side-two">Men</div>
+                    <div className="home-side-three">Register</div>
+                    <div className="home-bottom-section"><BottomComponent /></div>
+                </div>  
+            </Fragment>
+                )
+            }
+        }
+        
+        export default withErrorBoundary(Home);

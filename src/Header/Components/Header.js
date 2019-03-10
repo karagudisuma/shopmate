@@ -18,6 +18,10 @@ class Header extends Component {
 
     render() {
         return (
+            <Fragment>
+            <div className="login-bar">
+                <a>Login</a>
+            </div>
             <Navbar className="dark" bg="dark" expand="lg" variant="dark">
             <Navbar.Brand className="logo">SHOPMATE</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -34,6 +38,7 @@ class Header extends Component {
                 </Form>
             </Navbar.Collapse>
             </Navbar>
+            </Fragment>
         )
     }
 }
