@@ -1,1 +1,1 @@
-export { default as SignInBar } from './SignIn';
+export { default as SignUpModal } from './SignUpModal';

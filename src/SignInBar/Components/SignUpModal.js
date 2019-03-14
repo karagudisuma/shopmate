@@ -1,52 +1,50 @@
-import React, { Fragment, Component } from "react";
+import React, { Component } from "react";
 import "../Styles/style.scss";
 import { withErrorBoundary } from "../../ErrorPage";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-class SignInBar extends Component {
+class SignUpModal extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            showSigninModal: false,
-            showSignupModal: false,
             validated: false
         };
-        this.showSigninModal = this.showSigninModal.bind(this);
-        this.showSignupModal = this.showSignupModal.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleClose = this.handleClose.bind(this);
     }
 
     handleSubmit(event) {
-        console.log(event.currentTarget);
         const form = event.currentTarget;
         if (form.checkValidity() === false) {
             event.preventDefault();
             event.stopPropagation();
         }
+        else{
+            let signUpObj = {
+                name: form.querySelector('input#formBasicName').value,
+                email: form.querySelector('input#formBasicEmail').value,
+                password: form.querySelector('input#formBasicPassword').value
+            }
+            this.props.handleSubmit(signUpObj);
+        }
         this.setState({ validated: true });
     }
 
-    showSignupModal = () => {
-        this.setState({ showSignupModal: true });
-    };
-
-    showSigninModal = () => {
-        this.setState({ showSigninModal: true });
-    };
-
     handleClose() {
-        this.setState({ showSignupModal: false, showSigninModal: false, validated: false });
+        this.setState({ 
+            showSignupModal: false, 
+            validated: false 
+        });
+        this.props.handleClose();
     }
 
     render() {
-        let { showSignupModal, showSigninModal, validated } = this.state;
+        let { showSignupModal } = this.props;
+        let { validated } = this.state;
         return (
-            <div>
-                Hi <a onClick={this.showSigninModal}>Signin</a> or
-                    <a onClick={this.showSignupModal}>Register</a>
+            
                 <Modal
                     show={showSignupModal}
                     onHide={this.handleClose}
@@ -60,6 +58,13 @@ class SignInBar extends Component {
                         validated={validated}
                         onSubmit={e => this.handleSubmit(e)}>
                         <Modal.Body>
+                            <Form.Group controlId="formBasicName" bsPrefix="form-group-input">
+                                <Form.Control type="text" required placeholder="Name" className="form-control-input"/>
+                                <Form.Control.Feedback type="invalid">
+                                    Please enter your Name
+                                </Form.Control.Feedback>
+                            </Form.Group>
+
                             <Form.Group controlId="formBasicEmail" bsPrefix="form-group-input">
                                 <Form.Control type="email" required placeholder="Email" className="form-control-input"/>
                                 <Form.Control.Feedback type="invalid">
@@ -73,13 +78,6 @@ class SignInBar extends Component {
                                     Please enter password
                                 </Form.Control.Feedback>
                             </Form.Group>
-
-                            <Form.Group controlId="formBasicReTypePassword" bsPrefix="form-group-input">
-                                <Form.Control type="password" required placeholder="Retype Password" className="form-control-input"/>
-                                <Form.Control.Feedback type="invalid">
-                                    Passwords are not matching
-                                </Form.Control.Feedback>
-                            </Form.Group>
                         </Modal.Body>
                         <Modal.Footer bsPrefix="modal-footer-align">
                             <Button variant="primary" type="submit" bsPrefix="btn-sign">
@@ -90,9 +88,8 @@ class SignInBar extends Component {
                         </Modal.Footer>
                     </Form>
                 </Modal>
-            </div>
         );
     }
 }
 
-export default withErrorBoundary(SignInBar);
+export default withErrorBoundary(SignUpModal);

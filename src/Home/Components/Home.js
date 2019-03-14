@@ -34,7 +34,7 @@ function WowComponent() {
 
 function BottomComponent() {
     return (
-        <div class="bottom-container p-5">
+        <div className="bottom-container p-5">
             <p className="btm-disc-text">10% Discount for your subscription</p>
             <p className="btm-desc-txt">Carry the day in style with this extra-large tote crafted in our chic B.B. Collection textured PVC. Featuring colorful faux leather trim, this tote offers a roomy interior.</p>
             <Form inline>

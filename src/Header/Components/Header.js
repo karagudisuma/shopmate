@@ -20,7 +20,7 @@ class Header extends Component {
     render() {
         return (
             <Fragment>
-            <SignInBar.components.SignInBar />
+            <SignInBar.containers.SigninBar />
             <Navbar className="dark" bg="dark" expand="lg" variant="dark">
             <Navbar.Brand className="logo">SHOPMATE</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
