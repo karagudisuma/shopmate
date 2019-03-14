@@ -1,0 +1,67 @@
+@import '../../Shared/common.scss';
+
+.btn-sign{
+    width: 220px;
+    height: 60px;
+    background-color: $tertary-color;
+    border-radius: 50px;
+    color: $primary-color;
+    font-size: 16px;
+    font-family: Montserrat;
+    font-weight: bold;
+    margin: 10px auto;
+}
+
+.modal-container{
+    width: 381px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+    background-color: $primary-color;
+    text-align: center;
+
+}
+
+.sign-title{
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: bold;
+    margin: auto;
+    text-align: center;
+    color: $font-color-dark;
+}
+
+.btn-close{
+    width: 24px;
+    height: 24px;
+    float: right;
+    
+}
+
+.form-group-input{
+    margin: 12px 20px;
+}
+
+.form-control-input{
+    line-height: 60px;
+    width: 100%;
+    border-radius: 3px;
+    border: solid 0.5px #e1e1e1;
+    text-align: center;
+}
+
+.modal-footer-align{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-para{
+    margin: 10px auto;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    color: $font-color-dark;
+}
+
+.footer-signin{
+    color: $tertary-color;
+    margin-left: 30px;
+}

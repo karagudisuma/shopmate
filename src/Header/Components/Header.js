@@ -5,6 +5,7 @@ import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
+import SignInBar from '../../SignInBar';
 
 class Header extends Component {
     constructor(props){
@@ -19,9 +20,7 @@ class Header extends Component {
     render() {
         return (
             <Fragment>
-            <div className="login-bar">
-                <a>Login</a>
-            </div>
+            <SignInBar.components.SignInBar />
             <Navbar className="dark" bg="dark" expand="lg" variant="dark">
             <Navbar.Brand className="logo">SHOPMATE</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
