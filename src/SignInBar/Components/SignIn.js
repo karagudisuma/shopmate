@@ -20,7 +20,7 @@ class SignInBar extends Component {
     }
 
     handleSubmit(event) {
-        console.log('clicked');
+        console.log(event.currentTarget);
         const form = event.currentTarget;
         if (form.checkValidity() === false) {
             event.preventDefault();
@@ -38,7 +38,7 @@ class SignInBar extends Component {
     };
 
     handleClose() {
-        this.setState({ showSignupModal: false, showSigninModal: false });
+        this.setState({ showSignupModal: false, showSigninModal: false, validated: false });
     }
 
     render() {
@@ -61,21 +61,21 @@ class SignInBar extends Component {
                         onSubmit={e => this.handleSubmit(e)}>
                         <Modal.Body>
                             <Form.Group controlId="formBasicEmail" bsPrefix="form-group-input">
-                                <Form.Control type="email" required placeholder="Email" bsPrefix="form-control-input"/>
+                                <Form.Control type="email" required placeholder="Email" className="form-control-input"/>
                                 <Form.Control.Feedback type="invalid">
                                     Please choose a valid email
                                 </Form.Control.Feedback>
                             </Form.Group>
 
                             <Form.Group controlId="formBasicPassword" bsPrefix="form-group-input">
-                                <Form.Control type="password" required placeholder="Password" bsPrefix="form-control-input"/>
+                                <Form.Control type="password" required placeholder="Password" className="form-control-input"/>
                                 <Form.Control.Feedback type="invalid">
                                     Please enter password
                                 </Form.Control.Feedback>
                             </Form.Group>
 
-                            <Form.Group controlId="formBasicPassword" bsPrefix="form-group-input">
-                                <Form.Control type="password" required placeholder="Retype Password" bsPrefix="form-control-input"/>
+                            <Form.Group controlId="formBasicReTypePassword" bsPrefix="form-group-input">
+                                <Form.Control type="password" required placeholder="Retype Password" className="form-control-input"/>
                                 <Form.Control.Feedback type="invalid">
                                     Passwords are not matching
                                 </Form.Control.Feedback>

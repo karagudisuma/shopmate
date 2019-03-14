@@ -10,7 +10,7 @@ import { withErrorBoundary } from '../../ErrorPage';
 
 function TotoBagComponent() {
     return (
-        <div class="tote-container">
+        <div className="tote-container">
             <div className="mx-2 tote-img"><img src={toteBagImg} width="280" height="280"></img></div>
             <div className="mx-3 tote-text">
                 <h2 className="bag-heading">Vera Bradley</h2>
