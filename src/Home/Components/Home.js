@@ -4,6 +4,7 @@ import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
 import headerImg from '../Images/hero-1@3x.png';
 import toteBagImg from '../Images/totebag.jpg';
+import backpackImg from '../Images/backpacks.jpg';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import { withErrorBoundary } from '../../ErrorPage';
@@ -32,6 +33,14 @@ function WowComponent() {
     )
 }
 
+function BackPackComponent() {
+    return (
+        <div className="bag-container">
+            <div><img src={backpackImg} width="300" height="300"></img></div>
+        </div>
+    )
+}
+
 function BottomComponent() {
     return (
         <div className="bottom-container p-5">
@@ -56,7 +65,7 @@ class Home extends Component {
                     <div className="home-main"><Image src={headerImg} fluid /></div>
                     <div className="home-second-section"><TotoBagComponent /></div>
                     <div className="home-side-one"><WowComponent /></div>
-                    <div className="home-side-two">Men</div>
+                    <div className="home-side-two"><BackPackComponent /></div>
                     <div className="home-side-three">Register</div>
                     <div className="home-bottom-section"><BottomComponent /></div>
                 </div>  

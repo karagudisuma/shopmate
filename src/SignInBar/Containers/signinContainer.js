@@ -1,9 +1,12 @@
 import React, { Fragment, Component } from "react";
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import "../Styles/style.scss";
 import { withErrorBoundary } from "../../ErrorPage";
 import SignUpModal from '../Components/SignUpModal';
-import { fetchSignUp } from '../actions';
+import { requestSignup } from '../actions';
+import { createStructuredSelector } from 'reselect';
+import { signupDataReselect } from '../selectors';
 
 class SignInContainer extends Component {
     constructor(props) {
@@ -20,8 +23,8 @@ class SignInContainer extends Component {
     }
 
     handleSubmit(signUpObj) {
-        const { dispatch } = this.props
-        dispatch(fetchSignUp(signUpObj));
+        const { requestSignup } = this.props
+        requestSignup(signUpObj);
     }
 
     showSignupModal = () => {
@@ -54,13 +57,16 @@ class SignInContainer extends Component {
     }
 }
 
-function mapStateToProps(state) {
-    const { login } = state;
-    const { isFetching } = login;
+/*
+const mapStateToProps = createStructuredSelector({
+    signUpData: signupDataReselect(),
+});*/
+const mapStateToProps = state => {
     return {
-
-        isFetching,
-
-    }
+        signUpData: state.loginReducer
+    };
 }
-export default withErrorBoundary(connect(mapStateToProps)(SignInContainer));
+
+const mapDispatchToProps = dispatch => bindActionCreators({ requestSignup }, dispatch);
+
+export default withErrorBoundary(connect(mapStateToProps, mapDispatchToProps)(SignInContainer));
