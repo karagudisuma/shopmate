@@ -3,6 +3,8 @@ import * as api from '../Shared/js/config';
 
 export const SIGNUP_REQUEST = "SIGNUP_REQUEST";
 export const SIGNUP_RESPONSE = "SIGNUP_RESPONSE";
+export const SIGNUP_FAILURE = "SIGNUP_FAILURE";
+export const SIGNIN_REQUEST = "SIGNIN_REQUEST";
 
 export const requestSignup = signupObj => {
     return {
@@ -15,13 +17,30 @@ export const requestSignup = signupObj => {
     };
 };
 
-export const receiveSignup = signupObj => {
+export const receiveSignup = customerData => {
     return {
         type: SIGNUP_RESPONSE,
-        signupObj
+        customerData
     };
 };
 
+export const failureSignup = () => {
+    return {
+        type: SIGNUP_FAILURE
+    };
+};
+
+export const requestSignIn = signinObj => {
+    return {
+        type: SIGNIN_REQUEST,
+        data: {
+            email: signinObj.email,
+            password: signinObj.password
+        }
+    };
+};
+
+/*
 export const signUpApiCall = signupObj => {
     let headers = {
         'Content-Type': 'application/json'
@@ -34,11 +53,11 @@ export const signUpApiCall = signupObj => {
     return axios.post('https://backendapi.turing.com/customers', data, { headers: headers });
 };
 
-/*
+
 export function fetchSignUp(signupObj) {
     let body = JSON.stringify(signupObj);
     return dispatch => dispatch(requestSignup(signupObj));
-   
+
         return axios.post('https://backendapi.turing.com/customers', 
             body, {
                 headers: {
