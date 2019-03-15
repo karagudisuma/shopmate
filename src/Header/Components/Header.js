@@ -26,11 +26,11 @@ class Header extends Component {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="nav-fill w-100">
-                <Nav.Link onClick={this.handleClick}>Women</Nav.Link>
-                <Nav.Link>Men</Nav.Link>
-                <Nav.Link>Kids</Nav.Link>      
-                <Nav.Link>Shoes</Nav.Link>
-                <Nav.Link>Brand</Nav.Link>
+                <Nav.Link href="/dashboard/women">Women</Nav.Link>
+                <Nav.Link href="/dashboard/men">Men</Nav.Link>
+                <Nav.Link href="/dashboard/kids">Kids</Nav.Link>      
+                <Nav.Link href="/dashboard/shoes">Shoes</Nav.Link>
+                <Nav.Link href="/dashboard/brand">Brand</Nav.Link>
                 </Nav>
                 <Form inline>
                 <FormControl type="text" placeholder="Search Anything" className="mr-2 pl-2" bsPrefix="form-control-search"/>

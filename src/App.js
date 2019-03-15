@@ -19,6 +19,7 @@ class App extends Component {
         <Header.components.Header />
         <Switch>
           <Route path="/" component={PublicRoutes} />
+          <Route path="/dashboard" component={PublicRoutes} />
         </Switch>
         <Footer.components.Footer />
       </Fragment>

@@ -1,0 +1,1 @@
+export { dashboardMenuWomen } from './dashboardMenu';
