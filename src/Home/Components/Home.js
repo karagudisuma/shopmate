@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import headerImg from '../Images/hero-1@3x.png';
 import toteBagImg from '../Images/totebag.jpg';
 import backpackImg from '../Images/backpacks.jpg';
+import laptopgirlImg from '../Images/girl-with-laptop.jpg';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import { withErrorBoundary } from '../../ErrorPage';
@@ -25,18 +26,18 @@ function TotoBagComponent() {
 
 function WowComponent() {
     return (
-        <div className="wow-container">
+        <div>
             <p className="wow-heading">wow</p>
-            <p className="wow-text-one">Check</p>
-            <p className="wow-text-two">What!</p>
+            <p className="wow-text"><span className="wow-text-one">Check</span><span className="wow-text-two"><br/>What!</span></p>
+            
         </div>
     )
 }
 
 function BackPackComponent() {
     return (
-        <div className="bag-container">
-            <div><img src={backpackImg} width="300" height="300"></img></div>
+        <div>
+            <img src={backpackImg} alt="girls-in-jeans" width="300px" height="300px"></img>
         </div>
     )
 }
@@ -54,6 +55,17 @@ function BottomComponent() {
     )
 }
 
+function RegisterComponent(){
+    return(
+        <div>
+            <img src={laptopgirlImg} alt="girls-in-jeans" width="100%" height="408"></img>
+            <h1 className="register-header">Let the Game begin</h1>
+            <h5 className="register-para">Registration is on - get ready for the Open</h5>
+            <Button variant="primary" bsPrefix="btn-shop">Register</Button>
+        </div>    
+    )
+}
+
 class Home extends Component {
     constructor(props) {
         super(props);
@@ -66,7 +78,7 @@ class Home extends Component {
                     <div className="home-second-section"><TotoBagComponent /></div>
                     <div className="home-side-one"><WowComponent /></div>
                     <div className="home-side-two"><BackPackComponent /></div>
-                    <div className="home-side-three">Register</div>
+                    <div className="home-side-three"><RegisterComponent /></div>
                     <div className="home-bottom-section"><BottomComponent /></div>
                 </div>  
             </Fragment>

@@ -12,14 +12,29 @@
 
 .home-side-one{
     grid-area: home-side-one;
+    background-color: #84e6f1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 312px;
+    margin: 12px; 
 }
 
 .home-side-two{
     grid-area: home-side-two;
+    width: 300px;
+    height: 312px;
+    margin: 8px 12px; 
 }
 
 .home-side-three{
     grid-area: home-side-three;
+    margin: 13px 12px 28px 12px;
+    height: 648px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+    background-color: $primary-color;
+    text-align: center;
 }
 
 .home-bottom-section{
@@ -94,40 +109,27 @@
     color: $secondary-color;
 }
 
-.bag-container{
-    width: 300px;
-    height: 300px;
-    margin: 15px;
-}
-
-.wow-container{
-    background-color: #84e6f1;
-    width: 300px;
-    height: 300px;
-    margin: 15px; 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    text-align: center;
-    padding: 20px;
-}
-
 .wow-heading{
-    font-family: PlayfairDisplay;
-    font-size: 36px;
+    font-family: PlayfairDisplay-Bold;
+    font-size: 48px;
     font-weight: bold;
     text-transform: uppercase;
     align-content: flex-end;
+    margin: 60px auto;
 }
 
 .wow-text-one,
 .wow-text-two{
-    font-family: Montserrat;
-    font-size: 21px;
+    font-family: Montserrat-Bold;
+    font-size: 24px;
     color: $tertary-color;
     font-weight: bold;
     letter-spacing: 0.5px;
-    margin: 0px;
+    width: 125px;
+}
+
+.wow-text{
+    margin-top: 5px;
 }
 
 .wow-text-two{
@@ -165,3 +167,23 @@
     border: solid 0.5px #e1e1e1;
 }
 
+.register-header{
+    font-family: PlayfairDisplay;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    color: $font-color-dark;
+    margin: 15px auto;
+}
+
+.register-para{
+    height: 24px;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+    color: $font-color-dark;
+    margin: 15px auto 30px auto;
+}
