@@ -1,1 +1,2 @@
-export { dashboardMenuWomen } from './dashboardMenu';
+export { DashboardMenuWomen } from './dashboardMenu';
+export { ProductDisplay } from './productDisplay';

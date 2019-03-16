@@ -1,0 +1,53 @@
+@import '../../Shared/common.scss';
+
+.menu-container{
+    margin: 24px 32px;
+    background-image: url(../Images/bow-tie-corporate.jpg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    height: 336px;
+
+    ul{
+        padding: 0px;
+        width: 256px;
+        li{
+            list-style-type: none;
+            font-family: Montserrat;
+            font-size: 16px;
+            font-weight: bold;
+            color: #FFFFFF
+        }
+    }
+}
+
+.menu-list{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 80px;
+}
+
+.menu-header{
+    height: 72px;
+    font-family: PlayfairDisplay;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    margin-top: 37px;
+    margin-left: 80px;
+}
+
+.card-container{
+    width: 220px;
+    height: 338px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+    background-color: $light-white;
+    margin: 12px 10px;
+}
+
+.no-product-text{
+    font-family: PlayfairDisplay;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+}
